@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
-class VideoPlayerScreen extends StatefulWidget {
-  final File video;
+import '../../models/KotKit.dart';
 
-  const VideoPlayerScreen({Key? key, required this.video}) : super(key: key);
+class VideoPlayerScreen extends StatefulWidget {
+  final KotKit toktik;
+
+  const VideoPlayerScreen({Key? key, required this.toktik}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
@@ -20,7 +22,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.file(widget.video)
+    _controller = VideoPlayerController.network(widget.toktik.video)
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized
         setState(() {});
