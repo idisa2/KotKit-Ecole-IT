@@ -1,7 +1,11 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
     "cmake.sourceDirectory": "${workspaceFolder}/windows/runner",
-    "gradle.nestedProjects": false
+    "gradle.nestedProjects": false,
+    "cSpell.words": [
+        "Acount",
+        "Profil"
+    ]
    
 
 }
