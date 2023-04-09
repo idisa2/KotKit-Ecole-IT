@@ -15,8 +15,6 @@ class AppUser {
   DateTime token_expire;
   // String department;
   List<String> groups;
-  int commune;
-  int departement;
   String? avatar;
 
   AppUser({
@@ -34,8 +32,6 @@ class AppUser {
     required this.is_active,
     // this.department,
     required this.groups,
-    required this.commune,
-    required this.departement,
     this.avatar,
   });
 
@@ -48,12 +44,10 @@ class AppUser {
         last_name: json["last_name"],
         gender: json["gender"],
         fcm_token: json["fcm_token"],
-        access_token: json["access_token"],
-        refresh_token: json["refresh_token"],
-        is_staff: json["is_staff"],
-        commune: json["commune"] ?? 1,
-        departement: json["departement"] ?? 1,
-        is_active: json["actif"],
+        access_token: json["access_token"] ?? '',
+        refresh_token: json["refresh_token"] ?? "",
+        is_staff: json["is_staff"] ?? false,
+        is_active: json["actif"] ?? true,
         avatar: json["avatar"],
         // department: json["department"],
         // groups: json["groups"] != null && json["groups"]?.cast<String>().,
@@ -71,8 +65,6 @@ class AppUser {
   factory AppUser.fromLocalJson(Map<String, dynamic> json) {
     return AppUser(
         id: json["id"],
-        commune: json["commune"] ?? 1,
-        departement: json["departement"] ?? 1,
         email: json["email"],
         phone_number: json["phone_number"],
         first_name: json["first_name"],
@@ -106,9 +98,7 @@ class AppUser {
         "refresh_token": this.refresh_token,
         "is_staff": is_staff == true ? 1 : 0,
         "is_active": is_active == true ? 1 : 0,
-        "groups": groups?.join(","),
-        "commune": commune ?? 1,
-        "departement": departement ?? 1,
+        "groups": groups.join(","),
         "token_expire": token_expire.toString()
       };
 
@@ -123,7 +113,6 @@ class AppUser {
         "fcm_token": this.fcm_token,
         "is_staff": this.is_staff,
         "is_active": this.is_active,
-        "commune": commune,
         "groups": groups.map((e) => e).toList(),
   };
 }

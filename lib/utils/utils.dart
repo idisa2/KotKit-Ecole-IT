@@ -39,7 +39,7 @@ class Utils{
       useRootNavigator: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Center(child: Image.asset("assets/img/mdm.png", height: 50.0,)),
+          title: Center(child: Image.asset("assets/images/logo.png", height: 50.0,)),
           content: Text(message, textAlign: TextAlign.center,),
           actions: <Widget>[
             TextButton(
@@ -59,7 +59,7 @@ class Utils{
       useRootNavigator: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Center(child: Image.asset("assets/images/fondblanc.png", height: 50.0,)),
+          title: Center(child: Image.asset("assets/images/logo.png", height: 50.0,)),
           content: Container(
             width: double.infinity,
             // height: 80,

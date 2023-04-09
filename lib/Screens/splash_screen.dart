@@ -13,6 +13,7 @@ import '../models/user.dart';
 import '../utils/commons.dart';
 import '../utils/constants.dart';
 import 'Login/login_screen.dart';
+import 'Profil/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return  LoginScreen();
+              return  HomeScreen();
             },
           ),
         );
