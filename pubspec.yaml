@@ -16,7 +16,7 @@ dependencies:
   image_picker: ^0.8.7+1
 
   http: ^0.13.5 #0.13.3 #^0.12.1
-  prefs: ^3.3.0 #^3.0.0
+  prefs: ^4.0.0 #^3.0.0
   cached_network_image: #^3.2.0 #^2.0.0
   flutter_spinkit: ^5.0.0 #^4.1.2+1
   fluttertoast: ^8.0.8 #^4.0.0
