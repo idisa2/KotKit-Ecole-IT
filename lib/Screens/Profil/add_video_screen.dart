@@ -117,7 +117,7 @@ class _AddVideoScreenState extends State<AddVideoScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VideoPlayerScreen(video: video),
+                      builder: (context) => //ideoPlayerScreen(toktik: toktik,),
                     ),
                   );
                 },
