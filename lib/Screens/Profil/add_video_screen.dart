@@ -73,6 +73,7 @@ class _AddVideoScreenState extends State<AddVideoScreen> {
 
       if (tags != null && description != null) {
         setState(() {
+          
           _videos.add(File(pickedFile.path));
         });
         final videoData = VideoData(tags: tags, description: description);
@@ -114,10 +115,11 @@ class _AddVideoScreenState extends State<AddVideoScreen> {
                 ),
                 title: Text('Video $index'),
                 onTap: () {
+                  var _listKitKot;
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VideoPlayerScreen(video: video),
+                      builder: (context) => VideoPlayerScreen(toktik: _listKitKot.elementAt(index)),
                     ),
                   );
                 },
